@@ -19,7 +19,6 @@ def hangman():
     while attempts > 0:
         guess = input("\nGuess a letter: ").lower()
 
-        # Check if the guess is a single character
         if len(guess) != 1:
             print("Please guess only one letter at a time.")
             continue
@@ -30,7 +29,6 @@ def hangman():
             guessed_letters.add(guess)
             print("Good guess!")
 
-            # Check if the player has guessed all the letters in the word
             if all(letter in guessed_letters for letter in word):
                 print("\nCongratulations! You guessed the word:", word)
                 break
@@ -38,9 +36,8 @@ def hangman():
             attempts -= 1
             print(f"Wrong guess! Attempts left: {attempts}")
 
-        # Display the current state of the word
         print(display_word(word, guessed_letters))
-
+        
     if attempts == 0:
         print("\nOut of attempts! The word was:", word)
 
