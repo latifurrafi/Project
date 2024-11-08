@@ -1,5 +1,4 @@
 def display_board(board):
-    print("\n")
     print(" " + board[0] + " | " + board[1] + " | " + board[2])
     print("---|---|---")
     print(" " + board[3] + " | " + board[4] + " | " + board[5])
@@ -19,11 +18,9 @@ def check_winner(board, player):
     return False
 def check_draw(board):
     return " " not in board
-
 def play_game():
     board = [" "] * 9  
     current_player = "X"
-
     print("Welcome to Tic-Tac-Toe!")
     display_board(board)
 
@@ -33,8 +30,10 @@ def play_game():
         except ValueError:
             print("Invalid input. Please enter a number between 1 and 9.")
             continue
-        if move < 0 or move > 8 or board[move] != " ":
+        if move < 0 or move > 8:
             print("Invalid move. Please choose an empty spot between 1 and 9.")
+        elif board[move] != " ":
+            print("Press Something between 1 to 8")
             continue
 
         board[move] = current_player
@@ -47,5 +46,4 @@ def play_game():
             break
 
         current_player = "O" if current_player == "X" else "X"
-
 play_game()
