@@ -34,10 +34,10 @@ def hangman():
                 break
         else:
             attempts -= 1
-            print(f"Wrong guess! Attempts left: {attempts}")
+            print(f"Wrong Guess! Attempts left: {attempts}")
 
         print(display_word(word, guessed_letters))
-        
+
     if attempts == 0:
         print("\nOut of attempts! The word was:", word)
 
