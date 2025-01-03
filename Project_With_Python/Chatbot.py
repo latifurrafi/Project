@@ -3,7 +3,7 @@ import random
 
 # Predefined responses for the chatbot
 responses = {
-    "hello": ["Hi there!", "Hello!", "Hey!", "Hi! How can I help you today?"],
+    "hello": ["Hi there!", "Hello!", "Hey!", "Hi! How can I help you today?", "Ki obostha..?"],
     "how are you": ["I'm just a bot, but I'm doing well! How about you?", "I'm doing great, thank you!"],
     "your name": ["I'm your friendly chatbot!", "I don't have a name, but I'm here to assist you."],
     "bye": ["Goodbye! Have a great day!", "Bye! Take care!", "See you later!"],
